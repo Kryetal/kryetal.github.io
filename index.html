@@ -137,6 +137,157 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java-学习笔记-day4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/">java_学习笔记_day4</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/" class="archive-article-date">
+  	<time datetime="2023-09-11T07:27:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><p>静态初始化</p>
+<p>即知道值直接初始化数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">double</span>[] hens=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1.2</span>,<span class="hljs-number">6.5</span>,<span class="hljs-number">6.6</span>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>声明并分配空间</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建数组a，大小为5个int</span><br><span class="hljs-type">int</span>[] a=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">5</span>];<br></code></pre></td></tr></table></figure>
+
+<p>先声明不分配空间</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> a[];<br>a=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">5</span>];<br></code></pre></td></tr></table></figure>
+
+<h3 id="数组下标越界异常"><a href="#数组下标越界异常" class="headerlink" title="数组下标越界异常"></a>数组下标越界异常</h3><p>下标越界会报错</p>
+<h2 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h2><h3 id="数组赋值机制"><a href="#数组赋值机制" class="headerlink" title="数组赋值机制"></a>数组赋值机制</h3><p>数组赋值是引用传递，即拷贝了地址</p>
+<p>arr2修改时arr1也修改了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> arr1[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;<br><span class="hljs-type">int</span> arr2[]=arr1;<br>arr2[<span class="hljs-number">0</span>]=<span class="hljs-number">10</span>;<br>System.out.println(arr1);<br>System.out.println(arr2);<br></code></pre></td></tr></table></figure>
+
+<p>arr指向地址，值存在地址里，分别存在栈区和堆区</p>
+<p>所以arr2&#x3D;arr1相当于arr2也指向了同一个地址</p>
+<p><img src="/../image/java_learning_day4/1.png" alt="1"></p>
+<h3 id="数组拷贝-1"><a href="#数组拷贝-1" class="headerlink" title="数组拷贝"></a>数组拷贝</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> arr2[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[arr1.length];<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr1.length;i++)<br>	arr2[i]=arr1[i];<br></code></pre></td></tr></table></figure>
+
+<h2 id="数组反转"><a href="#数组反转" class="headerlink" title="数组反转"></a>数组反转</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">ArrayReverse</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">int</span>[] arr=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;;<br>		<span class="hljs-type">int</span> temp=<span class="hljs-number">0</span>;<br>		<span class="hljs-type">int</span> len=arr.length;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;len/<span class="hljs-number">2</span>;i++)&#123;<br>			temp=arr[len-<span class="hljs-number">1</span>-i];<br>			arr[len-<span class="hljs-number">1</span>-i]=arr[i];<br>			arr[i]=temp;<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;len;i++)<br>			System.out.print(arr[i]);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="数组扩容（动态添加元素）"><a href="#数组扩容（动态添加元素）" class="headerlink" title="数组扩容（动态添加元素）"></a>数组扩容（动态添加元素）</h2><p>没学链表之前，目前只能用创建新数组来添加，然后再把新数组赋给要添加的数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">ArrayAdd</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">int</span>[] arr1=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;<br>		<span class="hljs-type">int</span>[] arr2=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[arr1.length+<span class="hljs-number">1</span>];<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr1.length;i++)<br>			arr2[i]=arr1[i];<br>		arr2[arr2.length-<span class="hljs-number">1</span>]=<span class="hljs-number">4</span>;<br>		arr1=arr2;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr1.length;i++)<br>			System.out.print(arr1[i]);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-数据结构学习笔记-算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95/">数据结构学习笔记_算法</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2023-09-11T06:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java-学习笔记-day3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -178,6 +329,13 @@
 <p>打印空心金字塔</p>
 <p><img src="/../image/java_learning_day3/1.png" alt="1"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">EmptyTower</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		Scanner scanner=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>		<span class="hljs-type">int</span> floorNum=scanner.nextInt();<br>		<span class="hljs-type">int</span> floorStar=(<span class="hljs-number">2</span>*floorNum-<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;floorNum;i++)&#123;<br>			<span class="hljs-keyword">if</span>(i==floorNum-<span class="hljs-number">1</span>)<br>				<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> t=<span class="hljs-number">0</span>;t&lt;<span class="hljs-number">2</span>*floorNum-<span class="hljs-number">1</span>;t++)<br>					System.out.print(<span class="hljs-string">&quot;*&quot;</span>);<br>			<span class="hljs-keyword">else</span> &#123;<br>				<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;=floorStar+i;j++)<br>					<span class="hljs-keyword">if</span>(j==floorStar-i||j==floorStar+i)<br>						System.out.print(<span class="hljs-string">&quot;*&quot;</span>);<br>					<span class="hljs-keyword">else</span> System.out.print(<span class="hljs-string">&quot; &quot;</span>);<br>			&#125;<br>			System.out.println();<br>		&#125;<br><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h2><p>break是直接跳出整个循环（多层嵌套循环中退出最近的循环）（可用于while循环里的跳出条件），continue是直接终止本次循环进入下一次循环（可在for循环里用）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">BreakAndContinue</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span><span class="hljs-number">0</span>;i&lt;=<span class="hljs-number">5</span>;i++)&#123;<br>			<span class="hljs-keyword">if</span>(i==<span class="hljs-number">2</span>)<br>				<span class="hljs-keyword">continue</span>;<br>			<span class="hljs-keyword">if</span>(i==<span class="hljs-number">5</span>)<br>				<span class="hljs-keyword">break</span>;<br>			System.out.println(i);<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>break后面也可以加标签，表示退出哪一层循环（尽量不用）</p>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p>水仙花数判断 一个数是否能等于自己各位3次方的和</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Execise</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>		<span class="hljs-type">int</span> n=scanner.nextInt();<br>		<span class="hljs-type">int</span> n_ge=n%<span class="hljs-number">10</span>;<br>		<span class="hljs-type">int</span> n_shi=n%<span class="hljs-number">100</span>/<span class="hljs-number">10</span>;<br>		<span class="hljs-type">int</span> n_bai=n/<span class="hljs-number">100</span>;<br>		<span class="hljs-keyword">if</span>((n_ge*n_ge*n_ge+n_shi*n_shi*n_shi+n_bai*n_bai*n_bai)==n)<br>			System.out.println(<span class="hljs-string">&quot;该数为水仙花数&quot;</span>);<br>		<span class="hljs-keyword">else</span> System.out.println(<span class="hljs-string">&quot;该数不为水仙花数&quot;</span>);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
       
