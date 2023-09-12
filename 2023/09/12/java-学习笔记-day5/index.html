@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Kryetal.github.io">
-  <title>数据结构学习笔记_算法 | Kryetal</title>
+  <title>java_学习笔记_day5 | Kryetal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的学习生活博客">
+  <meta name="description" content="面向对象编程（基础）类和对象类是一种数据类型，而对象则是根据类创建出来的实例 12345678910111213class test&amp;#123;	public static void main(String[] args) &amp;#123;		&#x2F;&#x2F; 创建实例对象		Cat cat&#x3D;new Cat();		cat.name&#x3D;&quot;丁真&quot;;		cat.age&#x3D;18;		System.out">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构学习笔记_算法">
-<meta property="og:url" content="https://kryetal.github.io/2023/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:title" content="java_学习笔记_day5">
+<meta property="og:url" content="https://kryetal.github.io/2023/09/12/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day5/index.html">
 <meta property="og:site_name" content="Kryetal">
-<meta property="og:description" content="我的学习生活博客">
+<meta property="og:description" content="面向对象编程（基础）类和对象类是一种数据类型，而对象则是根据类创建出来的实例 12345678910111213class test&amp;#123;	public static void main(String[] args) &amp;#123;		&#x2F;&#x2F; 创建实例对象		Cat cat&#x3D;new Cat();		cat.name&#x3D;&quot;丁真&quot;;		cat.age&#x3D;18;		System.out">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-11T06:14:02.000Z">
-<meta property="article:modified_time" content="2023-09-11T06:34:59.740Z">
+<meta property="og:image" content="https://kryetal.github.io/image/java_learning_day5/1.png">
+<meta property="og:image" content="https://kryetal.github.io/image/java_learning_day5/2.png">
+<meta property="og:image" content="https://kryetal.github.io/image/java_learning_day5/3.png">
+<meta property="article:published_time" content="2023-09-12T08:11:48.000Z">
+<meta property="article:modified_time" content="2023-09-12T12:54:16.008Z">
 <meta property="article:author" content="Kryetal">
 <meta property="article:tag" content="Java C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kryetal.github.io/image/java_learning_day5/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Kryetal" type="application/atom+xml">
   
@@ -137,27 +141,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据结构学习笔记-算法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java-学习笔记-day5" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据结构学习笔记_算法
+      java_学习笔记_day5
     </h1>
   
 
         
-        <a href="/2023/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2023-09-11T06:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
+        <a href="/2023/09/12/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day5/" class="archive-article-date">
+  	<time datetime="2023-09-12T08:11:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="面向对象编程（基础）"><a href="#面向对象编程（基础）" class="headerlink" title="面向对象编程（基础）"></a>面向对象编程（基础）</h1><h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><p>类是一种数据类型，而对象则是根据类创建出来的实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">test</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-comment">// 创建实例对象</span><br>		Cat cat=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Cat</span>();<br>		cat.name=<span class="hljs-string">&quot;丁真&quot;</span>;<br>		cat.age=<span class="hljs-number">18</span>;<br>		System.out.print(cat.name+<span class="hljs-string">&quot; &quot;</span>+cat.age);<br>	&#125;<br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Cat</span>&#123;<br>	String name;<br>	<span class="hljs-type">int</span> age;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>对象在内存里的存在形式</p>
+<p><img src="/../image/java_learning_day5/1.png" alt="1"></p>
+<p><img src="/../image/java_learning_day5/2.png" alt="2"></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>把b直接变成null相当于把一个人的外号不叫了，但是这个人还在，即a的实例还是在的</p>
+<p>但是b.age就会出现异常</p>
+<p><img src="/../image/java_learning_day5/3.png" alt="3"></p>
+<h2 id="方法（函数）"><a href="#方法（函数）" class="headerlink" title="方法（函数）"></a>方法（函数）</h2><h3 id="方法（函数）的调用机制"><a href="#方法（函数）的调用机制" class="headerlink" title="方法（函数）的调用机制"></a>方法（函数）的调用机制</h3><p>当运行到方法时，栈区会开辟一个独立的空间，方法运行结束后再回到调用的位置，继续执行代码</p>
+<h3 id="函数返回多个值"><a href="#函数返回多个值" class="headerlink" title="函数返回多个值"></a>函数返回多个值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] resMulti(<span class="hljs-type">int</span> n,<span class="hljs-type">int</span> m)&#123;<br>			<span class="hljs-type">int</span>[] resArr=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br>			resArr[<span class="hljs-number">0</span>]=n+m;<br>			resArr[<span class="hljs-number">1</span>]=n-m;<br>			<span class="hljs-keyword">return</span> resArr;<br>		&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="方法的注意事项"><a href="#方法的注意事项" class="headerlink" title="方法的注意事项"></a>方法的注意事项</h3><p><strong>没有用static修饰的方法叫做非静态方法，他不能直接跟main函数写在同一个类里面然后调用，必须写在其他类里通过实例对象调用，且方法里面不能嵌套申明方法</strong></p>
+<p>同类里的<strong>非静态方法</strong>可以直接互相调用，，，，不同类里的方法（得看访问修饰符，后续再学）想互相调用得先产生实例对象</p>
+<p>用函数做两个数交换时，因为没有指针，所以单纯用形参交换没有用，得来个返回值赋值才行，</p>
+<p>（<strong>即前面讲的进入方法时是新开辟了一个栈区</strong>）<strong>，但如果传的是引用类型，如数组、对象，则形参会影响实参，因为传的是地址，但也是新开辟了一个栈区空间来操作，如果执行p&#x3D;null等置空操作，跟实参没关系。可以参考对象拷贝那部分</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">SentPara</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		Method method=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Method</span>();<br>		method.test();<br>	&#125;<br><br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Method</span>&#123;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span>&#123;<br>		<span class="hljs-type">int</span> arr[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;<br>		test1(arr);<br>	&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">test1</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span>&#123;<br>		arr[<span class="hljs-number">0</span>]=<span class="hljs-number">100</span>;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.length;i++)<br>			System.out.println(arr[i]+<span class="hljs-string">&quot; &quot;</span>);  <span class="hljs-comment">//输出100 2 3</span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
       
 
       
@@ -236,7 +258,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://kryetal.github.io/2023/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://kryetal.github.io/2023/09/12/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -250,18 +272,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java_学习笔记_day4
-        
-      </div>
-    </a>
   
-  
-    <a href="/2023/09/09/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java_学习笔记_day3</div>
+    <a href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java_学习笔记_day4</div>
       <i class="icon-circle-right"></i>
     </a>
   
