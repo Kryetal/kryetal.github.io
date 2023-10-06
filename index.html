@@ -137,6 +137,147 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java-学习笔记-day6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/19/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day6/">java_学习笔记_day6</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/19/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day6/" class="archive-article-date">
+  	<time datetime="2023-09-19T09:35:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="类和对象（中级篇）"><a href="#类和对象（中级篇）" class="headerlink" title="类和对象（中级篇）"></a>类和对象（中级篇）</h1><h2 id="IDEA相关"><a href="#IDEA相关" class="headerlink" title="IDEA相关"></a>IDEA相关</h2><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><img src="/../image/java_learning_day6/1.png" alt="1"></p>
+<p>模板快捷键</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//sout相当于</span><br>System.out.print();<br><span class="hljs-comment">//fori相当于直接for循环</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>包的本质就是创建不同的文件夹来管理（存放）类，不同包下可以有相同名字的类</p>
+<p>一个类只能在一个package里</p>
+<p>包的三大作用：区分相同名字的类</p>
+<p>​						 当类很多时，可以很好的管理类</p>
+<p>​						 控制访问范围</p>
+<p><img src="/../image/java_learning_day6/2.png" alt="2"></p>
+<h2 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h2><p>公开级别：public</p>
+<p>受保护级别：protected</p>
+<p>默认级别：无修饰符</p>
+<p>私有：private</p>
+<p><img src="/../image/java_learning_day6/3.png" alt="3"></p>
+<h2 id="面向对象的三大特征（重要）"><a href="#面向对象的三大特征（重要）" class="headerlink" title="面向对象的三大特征（重要）"></a>面向对象的三大特征（重要）</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>封装就是把抽象出的数据（属性）和对数据的操作（方法）封装在一起，数据被保护在内部，程序的其他部分只有通过被授权的操作（方法），才能对数据进行操作</p>
+<p>封装可以隐藏实现细节，即使用者只能调用允许调用的方法，看不到实现细节</p>
+<p>也可以对数据进行验证，保证安全合理性，，即判断外来设置是否合理，是否符合原设的属性类型</p>
+<p>封装的实现步骤</p>
+<p><img src="/../image/java_learning_day6/4.png" alt="4"></p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承可以提高代码的复用性，不用每次都完全重复两个类里相同的部分</p>
+<p><strong>私有属性和方法不能在子类直接访问，但可以通过在父类里写get公共方法来间接访问</strong></p>
+<p><strong>如果是访问私有方法，则在父类里写个public方法，在这个方法里调用一下私有方法就行了，，</strong></p>
+<p><strong>即子类去调用那个public方法，间接调用了私有方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//            父类里的私有方法不能在子类里直接访问，</span><br><span class="hljs-comment">//            System.out.println(age);  这个就访问不了</span><br><span class="hljs-comment">//            要在父类里写公共方法间接访问</span><br>            <span class="hljs-type">int</span> catAge=getAge();<br>            System.out.println(catAge);<br></code></pre></td></tr></table></figure>
+
+<p>子类必须调用父类的构造器来完成父类初始化</p>
+<p>当创建子类对象时，不管用子类的哪个构造器，都会调用父类的无参构造器，如果父类没有无参构造器，则会用super（）去指定使用父类的哪个构造器完成对父类的初始化</p>
+<p>子类继承父类对象的属性时，其实就是指向父类属性的地址</p>
+<p>继承会逐级往上查找，son继承father，father继承grandpa，则son也能访问grandpa里的属性和方法</p>
+<p>注意：用了super()后就不能用this()了，，this()是调用本类的构造函数，也得放最上面，和super一起就冲突了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//父类  </span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animal</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><span class="hljs-comment">//子类</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">Cat</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br><span class="hljs-comment">//        因为父类里设置了有参构造器，导致默认构造器没了</span><br><span class="hljs-comment">//        因此这里要用super来指定使用父类的哪个构造器来初始化父类</span><br><span class="hljs-comment">//        super(name,age);  直接用这个和下面两个加一起一样</span><br>        <span class="hljs-built_in">super</span>(age);<br><span class="hljs-comment">//     用super()系统就会先去找父类里的构造器，执行完父类的构造器后</span><br><span class="hljs-comment">//        再返回来执行当前构造器</span><br>        <span class="hljs-built_in">this</span>.name=name;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../image/java_learning_day6/5.png" alt="5"></p>
+<p>首先执行B()中this(“abc”)-&gt;从而执行B(String name)，这时默认有一个super执行了A()因此先输出a，之后输出了b name最后顺序执行this后面输出b，因此是a,b name,b</p>
+<h4 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h4><p>super代表父类的引用，用于访问父类的属性、方法、构造器</p>
+<p>当子类中有和父类同名的成员时，要访问父类的这个成员必须要用super</p>
+<p>super不限于父类，也可以再往上找爷爷类等，，，</p>
+<p>（其实就是调用方法时会先从本类找，如果有就直接调用，没有再去父类找，，，）</p>
+<p>this和super比较</p>
+<p><img src="/../image/java_learning_day6/6.png" alt="6"></p>
+<h4 id="方法重写-覆盖"><a href="#方法重写-覆盖" class="headerlink" title="方法重写&#x2F;覆盖"></a>方法重写&#x2F;覆盖</h4><p>即子类的一个方法和父类完全一样，就说子类的方法覆盖了父类</p>
+<p>（子类方法的返回类型和父类一样或者是父类返回类型的子类，</p>
+<p>如父类为Object，子类为String）</p>
+<p>子类方法重写时，不能缩小父类方法的访问权限，，，（比如父类是public，子类不能重写为private）</p>
+<p>重载和重写对比</p>
+<p><img src="/../image/java_learning_day6/7.png" alt="7"></p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><h4 id="方法的多态"><a href="#方法的多态" class="headerlink" title="方法的多态"></a>方法的多态</h4><p>重写和重载就体现多态</p>
+<h4 id="对象的多态（重要）"><a href="#对象的多态（重要）" class="headerlink" title="对象的多态（重要）"></a>对象的多态（重要）</h4><p><img src="/../image/java_learning_day6/8.png" alt="8"></p>
+<p>利用运行类型可以变化的这一点，封装形参是对象的函数来达到对象的功能的使用</p>
+<p>多态的前提是：两个对象存在继承关系</p>
+<p><img src="/../image/java_learning_day6/9.png" alt="9"></p>
+<p>向上转型其实就是父类的引用指向子类对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Animal animal=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>();<br></code></pre></td></tr></table></figure>
+
+<p>向下转型只能强转父类的引用，不能改变父类对象（相当于人可以换身份地位，权限就不同了，但人还是这个人），但要求强转的引用原来的运行类型就是要转到的那个编译类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Animal animal=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Cat</span>();<br>Cat cat=(Cat)animal;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：属性没有重写的说法，属性的值看编译类型，而不是像方法一样先从运行类型开始找</strong></p>
+<p>instanceof 用于判断一个<strong>引用（对象）的运行类型</strong>是否为某个类型或该类型子类</p>
+<h4 id="java动态绑定机制（重要）"><a href="#java动态绑定机制（重要）" class="headerlink" title="java动态绑定机制（重要）"></a>java动态绑定机制（重要）</h4><p><strong>当调用对象方法的时候，该方法会和该对象的内存地址&#x2F;运行类型绑定</strong><br><strong>当调用对象属性时，没有动态绑定机制，哪里声明哪里使用</strong></p>
+<h4 id="多态数组"><a href="#多态数组" class="headerlink" title="多态数组"></a>多态数组</h4><p>即数组类型用对象就行,,,</p>
+<p>当多态数组调用里面对象的自己的方法时，要用instanceof判断一下类型，向下转型再调用</p>
+<h4 id="多态参数"><a href="#多态参数" class="headerlink" title="多态参数"></a>多态参数</h4><p>即方法定义的形参类型为父类类型，实参类型可以为子类类型</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="&#x3D;&#x3D;运算符"></a>&#x3D;&#x3D;运算符</h2><p><img src="/../image/java_learning_day6/10.png" alt="10"></p>
+<p>&#x3D;&#x3D;判断基本类型时只看值是否相等，示例里 i&#x3D;&#x3D;d为true   char ‘A’和65也相等</p>
+<p> &#x3D;&#x3D;在判断引用类型是否相等时，只看是否指向同一个对象，不看编译类型</p>
+<p>equals在Object类里的源码如下：其只是比较引用类型是否相等</p>
+<p>而在String类里进行了重写，用于比较内容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//Object类里  判断两个对象是否一样，即是否是同一个对象</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">equals</span><span class="hljs-params">(Object obj)</span> &#123;<br>        <span class="hljs-keyword">return</span> (<span class="hljs-built_in">this</span> == obj);<br>    &#125;<br><br><span class="hljs-comment">//String类里  判断内容是否一样</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">equals</span><span class="hljs-params">(Object anObject)</span> &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span> == anObject) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (anObject <span class="hljs-keyword">instanceof</span> String) &#123;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">anotherString</span> <span class="hljs-operator">=</span> (String)anObject;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> value.length;<br>            <span class="hljs-keyword">if</span> (n == anotherString.value.length) &#123;<br>                <span class="hljs-type">char</span> v1[] = value;<br>                <span class="hljs-type">char</span> v2[] = anotherString.value;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">while</span> (n-- != <span class="hljs-number">0</span>) &#123;<br>                    <span class="hljs-keyword">if</span> (v1[i] != v2[i])<br>                        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>                    i++;<br>                &#125;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="hashcode"><a href="#hashcode" class="headerlink" title="hashcode"></a>hashcode</h2><p><img src="/../image/java_learning_day6/11.png" alt="11"></p>
+<p>第三点不绝对</p>
+<p>后续集合再学习</p>
+<h2 id="finalize"><a href="#finalize" class="headerlink" title="finalize"></a>finalize</h2><p><img src="/../image/java_learning_day6/12.png" alt="12"></p>
+<p>资源如文件、数据库资源等，，，，</p>
+<p>实际开发中几乎不会去使用，都是系统自动释放，为了应付面试学一下</p>
+<h2 id="断点调试"><a href="#断点调试" class="headerlink" title="断点调试"></a>断点调试</h2><p>快捷键</p>
+<p><img src="/../image/java_learning_day6/13.png" alt="13"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/19/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java-学习笔记-day5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
