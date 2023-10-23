@@ -137,6 +137,194 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java-学习笔记-chapter8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/10/23/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-chapter8/">java_学习笔记_chapter8</a>
+    </h1>
+  
+
+        
+        <a href="/2023/10/23/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-chapter8/" class="archive-article-date">
+  	<time datetime="2023-10-23T06:47:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/10/23/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-chapter8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java-学习笔记-day7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/10/08/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day7/">java_学习笔记_day7</a>
+    </h1>
+  
+
+        
+        <a href="/2023/10/08/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day7/" class="archive-article-date">
+  	<time datetime="2023-10-08T07:44:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象编程（高级部分）"><a href="#面向对象编程（高级部分）" class="headerlink" title="面向对象编程（高级部分）"></a>面向对象编程（高级部分）</h1><h2 id="类变量-静态变量"><a href="#类变量-静态变量" class="headerlink" title="类变量&#x2F;静态变量"></a>类变量&#x2F;静态变量</h2><p>静态变量被对象的所有实例共享，且其在类加载的时候就生成了</p>
+<p>即静态变量即使没有创建实例也能访问</p>
+<p>静态变量在jdk8以后都放在堆里面</p>
+<p>静态方法也是在修饰符后面加static就行（如果该方法不需要涉及到实例对象，则可以做成静态方法使用，即把该方法当作一个工具使用）</p>
+<p>注意：<strong>类方法中没有this、super等对象参数，且类方法只能访问静态成员或静态方法</strong></p>
+<p>普通方法静态非静态成员都可以访问</p>
+<h2 id="理解main方法"><a href="#理解main方法" class="headerlink" title="理解main方法"></a>理解main方法</h2><p><img src="/../image/java_learning_day7/1.png" alt="1"></p>
+<p>这里知道了main方法是静态方法，可以解释以前在main里要创建实例对象来调用非静态方法，</p>
+<p>在main里只能直接调用静态方法和静态变量</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p><img src="/../image/java_learning_day7/2.png" alt="2"></p>
+<p>代码块的调用优先于构造器</p>
+<p>当用构造器创建对象实例时，代码块自动被调用，即当构造器中有重复内容时，可以单独写成代码块</p>
+<p>但静态代码块随着类的加载而执行，且只执行一次</p>
+<p><img src="/../image/java_learning_day7/3.png" alt="3"></p>
+<p><img src="/../image/java_learning_day7/4.png" alt="4"></p>
+<p>构造器的最前面隐含了super（）和普通代码块</p>
+<p>代码块的继承相关</p>
+<p><img src="/../image/java_learning_day7/5.png" alt="5"></p>
+<h2 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h2><p>即对某个类只能存在一个对象实例，且该类只提供一个取得对象实例的方法</p>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p><img src="/../image/java_learning_day7/6.png" alt="6"></p>
+<p>这种在内部先创建对象叫饿汉式，即先创建但不一定用到，可能会造成资源浪费</p>
+<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 构造器私有化</span><br><span class="hljs-comment">// 定义一个静态属性对象</span><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat cat;<br><span class="hljs-comment">// 提供一个public方法来返回Cat对象</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Cat <span class="hljs-title function_">getInstance</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-keyword">if</span>(cat==<span class="hljs-literal">null</span>)<br>            cat=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Cat</span>(<span class="hljs-string">&quot;Tom&quot;</span>);<br>        <span class="hljs-keyword">return</span> cat;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p>懒汉式在使用时才创建对象，懒汉式可能会造成线程安全问题</p>
+<h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><p><img src="/../image/java_learning_day7/7.png" alt="7"></p>
+<p><strong>如果final修饰的是静态属性，则初始化位置只能在定义时或静态代码块里，不能在构造器里初始化</strong></p>
+<p>final不能修饰构造方法</p>
+<p><strong>final一般与static一起使用，在调用时不会导致类加载</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> num=<span class="hljs-number">10</span>;<br><span class="hljs-keyword">static</span> &#123;<br>    System.out.println(<span class="hljs-string">&quot;静态代码块&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>当父类某些方法要声明但还不知道怎么实现，则先声明，叫做抽象类</p>
+<p>当一个类中存在抽象方法时，需要把该类声明为抽象类，抽象方法一般由子类来具体实现，但抽象类可以没有抽象方法</p>
+<p><strong>抽象类不能被实例化，抽象方法不能用final、private、static修饰，因为要让子类重写</strong></p>
+<p><strong>如果一个类继承了抽象类，则必须实现所有的抽象方法</strong></p>
+<p>抽象类很好地应用于模板设计模式</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>接口就是给出一些没用实现的方法，封装到一起，到某个类要使用的时候在具体写出该方法 </p>
+<p>在jdk8以后接口可以有默认方法，但是要default关键字修饰，也可以有静态方法</p>
+<p>继承接口类的类要实现接口规定的方法alt+enter快速实现，抽象类实现接口可以不用实现接口的方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">UsbInterface</span>  <span class="hljs-comment">//接口类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Phone</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">UsbInterface</span>   <span class="hljs-comment">//继承接口类</span><br></code></pre></td></tr></table></figure>
+
+<p>注意：<strong>接口不能被实例化，接口里的所有方法都是public且abstract，都可以省略了</strong></p>
+<p><strong>接口里的属性都是public static final</strong></p>
+<p>一个类可以同时实现多个接口（与类继承不一样），接口某种程度上也可以看作是java单继承机制的补充</p>
+<p>接口在一定程度上可以实现代码解耦（后续再说）</p>
+<p>接口类型的变量可以指向实现了接口的对象实例（体现多态）</p>
+<h3 id="接口的多态传递"><a href="#接口的多态传递" class="headerlink" title="接口的多态传递"></a>接口的多态传递</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//IB继承IA，则C也实现了IA</span><br><br><span class="hljs-keyword">interface</span> <span class="hljs-title class_">IA</span>&#123;&#125;<br><span class="hljs-keyword">interface</span> <span class="hljs-title class_">IB</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">IA</span>&#123;&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">C</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">IB</span>&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="内部类（难、重点）"><a href="#内部类（难、重点）" class="headerlink" title="内部类（难、重点）"></a>内部类（难、重点）</h2><p>一个类内部完整嵌套了另一个类，里面这个类就叫内部类</p>
+<p>内部类的最大特点就是可以访问私有属性</p>
+<p><img src="/../image/java_learning_day7/8.png" alt="8"></p>
+<h3 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h3><p><img src="/../image/java_learning_day7/9.png" alt="9"></p>
+<p>参考局部变量，有使用范围</p>
+<h3 id="匿名内部类（重点-）"><a href="#匿名内部类（重点-）" class="headerlink" title="匿名内部类（重点*）"></a>匿名内部类（重点*）</h3><p><img src="/../image/java_learning_day7/10.png" alt="10"></p>
+<p>一个应用场景是对某个接口只实现一次，可以用匿名内部类（参考C++匿名函数）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//Dog的编译类型是IA，运行类型其实就是匿名内部类所在外部类类名+$+序号</span><br><span class="hljs-comment">//其实系统底层分配了一个名字给new IA（）</span><br>IA Dog=<span class="hljs-keyword">new</span> <span class="hljs-title class_">IA</span>() &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">cry</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;狗叫&quot;</span>);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>匿名函数最佳实践是当作实参直接传递</p>
+<h3 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h3><p> 即直接定义在外部类的成员位置上 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//在main里可以这么调用</span><br>Outer.<span class="hljs-type">Inner</span> <span class="hljs-variable">inner</span> <span class="hljs-operator">=</span>Outer.<span class="hljs-keyword">new</span> <span class="hljs-title class_">Inner</span>();<br></code></pre></td></tr></table></figure>
+
+<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><p>也是放在外部类的成员位置，用static修饰</p>
+<p>可以访问外部类的所有静态成员，但不能直接访问非静态成员</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/10/08/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java-学习笔记-day6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
