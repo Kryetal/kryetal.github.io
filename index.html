@@ -137,6 +137,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-反射" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/11/30/%E5%8F%8D%E5%B0%84/">反射</a>
+    </h1>
+  
+
+        
+        <a href="/2023/11/30/%E5%8F%8D%E5%B0%84/" class="archive-article-date">
+  	<time datetime="2023-11-30T08:06:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/11/30/%E5%8F%8D%E5%B0%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java-文件相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -157,7 +219,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h1><h2 id="文件常用操作"><a href="#文件常用操作" class="headerlink" title="文件常用操作"></a>文件常用操作</h2><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/1.png" alt="1"></p>
+<p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2.png" alt="2"></p>
+<h2 id="IO流原理及流的分类"><a href="#IO流原理及流的分类" class="headerlink" title="IO流原理及流的分类"></a>IO流原理及流的分类</h2><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/3.png" alt="3"></p>
+<p>一个字符有多少字节是由编码决定</p>
+<h2 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h2><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/4.png" alt="4"></p>
+<h2 id="OutputStream"><a href="#OutputStream" class="headerlink" title="OutputStream"></a>OutputStream</h2><p>见代码</p>
+<h2 id="FileReader"><a href="#FileReader" class="headerlink" title="FileReader"></a>FileReader</h2><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/5.png" alt="5"></p>
+<h2 id="FileWriter"><a href="#FileWriter" class="headerlink" title="FileWriter"></a>FileWriter</h2><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/6.png" alt="6"></p>
+<p>没写进去之前是在内存里，要关闭或刷新才能写进去</p>
+<h2 id="节点流和处理流"><a href="#节点流和处理流" class="headerlink" title="节点流和处理流"></a>节点流和处理流</h2><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/7.png" alt="7"></p>
+<p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/8.png" alt="8"></p>
+<p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/9.png" alt="9"></p>
+<h3 id="处理流BufferedReader和BufferedWriter"><a href="#处理流BufferedReader和BufferedWriter" class="headerlink" title="处理流BufferedReader和BufferedWriter"></a>处理流BufferedReader和BufferedWriter</h3><p>用来处理字符流文件</p>
+<p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/10.png" alt="10"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">bufferedReader</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception&#123;<br>String filePath=<span class="hljs-string">&quot;D:\\PostGraduate_file\\java_learning\\my_source\\FileSource\\bufferedReader.txt&quot;</span>;<br>    <span class="hljs-type">BufferedReader</span> <span class="hljs-variable">bufferedReader</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">FileReader</span>(filePath));<br>    <span class="hljs-comment">//按行读取</span><br>    String line;<br>    <span class="hljs-keyword">while</span> ((line=bufferedReader.readLine())!=<span class="hljs-literal">null</span>)&#123;<br>        System.out.println(line);<br>    &#125;<br>    <span class="hljs-comment">//这里关闭其实是关闭FileReader</span><br>    bufferedReader.close();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="处理流BufferedInputStream和BufferedOutputStream"><a href="#处理流BufferedInputStream和BufferedOutputStream" class="headerlink" title="处理流BufferedInputStream和BufferedOutputStream"></a>处理流BufferedInputStream和BufferedOutputStream</h3><p>用来处理二进制文件</p>
+<h3 id="对象流"><a href="#对象流" class="headerlink" title="对象流"></a>对象流</h3><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/11.png" alt="11"></p>
+<p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/12.png" alt="12"></p>
+<p>标准输入输出流</p>
+<p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/13.png" alt="13"></p>
+<p>运行类型分别是BufferedInputStream和PrintStream</p>
+<h2 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h2><p>字节流转换成字符流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">InputStreamReader</span> <span class="hljs-variable">isr</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">InputStreamReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">FileInputStream</span>(filePath), <span class="hljs-string">&quot;gbk&quot;</span>);<br><span class="hljs-type">BufferedReader</span> <span class="hljs-variable">bufferedReader</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedReader</span>(isr);<br><br><span class="hljs-type">OutputStreamWriter</span> <span class="hljs-variable">osw</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">OutputStreamWriter</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">FileOutputStream</span>(filePath), <span class="hljs-string">&quot;utf8&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<h2 id="打印流"><a href="#打印流" class="headerlink" title="打印流"></a>打印流</h2><p>PrintStream和PrintWriter</p>
+<p>字节流                 字符流</p>
+<p>打印流只有输出流，没有输入流</p>
+<h2 id="Properties类"><a href="#Properties类" class="headerlink" title="Properties类"></a>Properties类</h2><p><img src="/../image/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/14.png" alt="14"></p>
+<p>store已存在的话会覆盖</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 用Properties类更方便获取数据</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">propertiesReadFile</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>    <span class="hljs-comment">//创建Properties对象</span><br>    <span class="hljs-type">Properties</span> <span class="hljs-variable">properties</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Properties</span>();<br>    <span class="hljs-comment">//加载</span><br>    properties.load(<span class="hljs-keyword">new</span> <span class="hljs-title class_">FileReader</span>(<span class="hljs-string">&quot;src\\mysql.properties&quot;</span>));<br>    <span class="hljs-comment">//打印内容</span><br>    properties.list(System.out);<br>    <span class="hljs-comment">//根据Key获取对应值</span><br>    System.out.println(<span class="hljs-string">&quot;用户名 &quot;</span>+properties.getProperty(<span class="hljs-string">&quot;user&quot;</span>));<br>    <span class="hljs-comment">//修改值</span><br>    properties.setProperty(<span class="hljs-string">&quot;phone&quot;</span>,<span class="hljs-string">&quot;123456789&quot;</span>);<br>    <span class="hljs-comment">//中文会转成unicode码</span><br>    properties.setProperty(<span class="hljs-string">&quot;猫&quot;</span>,<span class="hljs-string">&quot;Tom&quot;</span>);<br>    properties.store(<span class="hljs-keyword">new</span> <span class="hljs-title class_">FileOutputStream</span>(<span class="hljs-string">&quot;src\\mysql.properties&quot;</span>),<span class="hljs-literal">null</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
       
 
       
@@ -1050,110 +1148,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2023/09/12/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java-学习笔记-day4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/">java_学习笔记_day4</a>
-    </h1>
-  
-
-        
-        <a href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/" class="archive-article-date">
-  	<time datetime="2023-09-11T07:27:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><p>静态初始化</p>
-<p>即知道值直接初始化数组</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">double</span>[] hens=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1.2</span>,<span class="hljs-number">6.5</span>,<span class="hljs-number">6.6</span>&#125;;<br></code></pre></td></tr></table></figure>
-
-<p>声明并分配空间</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建数组a，大小为5个int</span><br><span class="hljs-type">int</span>[] a=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">5</span>];<br></code></pre></td></tr></table></figure>
-
-<p>先声明不分配空间</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> a[];<br>a=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">5</span>];<br></code></pre></td></tr></table></figure>
-
-<h3 id="数组下标越界异常"><a href="#数组下标越界异常" class="headerlink" title="数组下标越界异常"></a>数组下标越界异常</h3><p>下标越界会报错</p>
-<h2 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h2><h3 id="数组赋值机制"><a href="#数组赋值机制" class="headerlink" title="数组赋值机制"></a>数组赋值机制</h3><p>数组赋值是引用传递，即拷贝了地址</p>
-<p>arr2修改时arr1也修改了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> arr1[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;<br><span class="hljs-type">int</span> arr2[]=arr1;<br>arr2[<span class="hljs-number">0</span>]=<span class="hljs-number">10</span>;<br>System.out.println(arr1);<br>System.out.println(arr2);<br></code></pre></td></tr></table></figure>
-
-<p>arr指向地址，值存在地址里，分别存在栈区和堆区</p>
-<p>所以arr2&#x3D;arr1相当于arr2也指向了同一个地址</p>
-<p><img src="/../image/java_learning_day4/1.png" alt="1"></p>
-<h3 id="数组拷贝-1"><a href="#数组拷贝-1" class="headerlink" title="数组拷贝"></a>数组拷贝</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> arr2[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[arr1.length];<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr1.length;i++)<br>	arr2[i]=arr1[i];<br></code></pre></td></tr></table></figure>
-
-<h2 id="数组反转"><a href="#数组反转" class="headerlink" title="数组反转"></a>数组反转</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">ArrayReverse</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">int</span>[] arr=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;;<br>		<span class="hljs-type">int</span> temp=<span class="hljs-number">0</span>;<br>		<span class="hljs-type">int</span> len=arr.length;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;len/<span class="hljs-number">2</span>;i++)&#123;<br>			temp=arr[len-<span class="hljs-number">1</span>-i];<br>			arr[len-<span class="hljs-number">1</span>-i]=arr[i];<br>			arr[i]=temp;<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;len;i++)<br>			System.out.print(arr[i]);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="数组扩容（动态添加元素）"><a href="#数组扩容（动态添加元素）" class="headerlink" title="数组扩容（动态添加元素）"></a>数组扩容（动态添加元素）</h2><p>没学链表之前，目前只能用创建新数组来添加，然后再把新数组赋给要添加的数组</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">ArrayAdd</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">int</span>[] arr1=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;<br>		<span class="hljs-type">int</span>[] arr2=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[arr1.length+<span class="hljs-number">1</span>];<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr1.length;i++)<br>			arr2[i]=arr1[i];<br>		arr2[arr2.length-<span class="hljs-number">1</span>]=<span class="hljs-number">4</span>;<br>		arr1=arr2;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr1.length;i++)<br>			System.out.print(arr1[i]);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><p>这里只讲基础的冒泡排序</p>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>加入flag防止已经排序完成后还继续排序</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">BubbleSort</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">int</span>[] arr=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">8</span>,<span class="hljs-number">6</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>&#125;;<br>		<span class="hljs-type">boolean</span> flag=<span class="hljs-literal">true</span>;<br>		<span class="hljs-type">int</span> temp=<span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.length-<span class="hljs-number">1</span>;i++)&#123;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;arr.length-<span class="hljs-number">1</span>-i;j++)&#123;<br>				<span class="hljs-keyword">if</span>(arr[j]&gt;arr[j+<span class="hljs-number">1</span>])&#123;<br>					temp=arr[j+<span class="hljs-number">1</span>];<br>					arr[j+<span class="hljs-number">1</span>]=arr[j];<br>					arr[j]=temp;<br>					flag=<span class="hljs-literal">false</span>;<br>				&#125;<br>			&#125;<br>			<span class="hljs-keyword">if</span>(flag)<br>				<span class="hljs-keyword">break</span>;<br>			<span class="hljs-keyword">else</span> flag=<span class="hljs-literal">true</span>;<br>			System.out.println(Arrays.toString(arr));<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><p>具体在算法部分再学习</p>
-<p>顺序查找，，，顾名思义一个个对比</p>
-<h1 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h1><p>输出三阶单位阵</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">TwoDimensionalArray</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">int</span>[][] arr=&#123;&#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;,&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>&#125;,&#123;<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>&#125;&#125;;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.length;i++)&#123;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;arr[i].length;j++)<br>				System.out.print(arr[i][j]);<br>			System.out.print(<span class="hljs-string">&quot;\n&quot;</span>);<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>二维数组的存储空间</p>
-<p><img src="/../image/java_learning_day4/2.png" alt="2"></p>
-<p>杨辉三角</p>
-<p><img src="/../image/java_learning_day4/3.png" alt="3"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">YangHui</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">int</span>[][] arr=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">6</span>][];<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.length;i++)&#123;<br>			arr[i]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[i+<span class="hljs-number">1</span>];<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;arr[i].length;j++)&#123;<br>				<span class="hljs-keyword">if</span>(j==<span class="hljs-number">0</span>) arr[i][j]=<span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(j==arr[i].length-<span class="hljs-number">1</span>) arr[i][j]=<span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">else</span> arr[i][j]=arr[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>]+arr[i-<span class="hljs-number">1</span>][j];<br>			&#125;<br>		&#125;<br><br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.length;i++)&#123;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;arr[i].length;j++)<br>				System.out.print(arr[i][j]+ <span class="hljs-string">&quot; &quot;</span>);<br>			System.out.print(<span class="hljs-string">&quot;\n&quot;</span>);<br>		&#125;<br>	&#125;	<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/09/11/java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-day4/">展开全文 >></a>
         </p>
       
 
